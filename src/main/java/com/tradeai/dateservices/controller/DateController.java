@@ -26,8 +26,7 @@ public class DateController {
 	@Autowired 
 	private ProcessingDateService service;
 	
-	@GetMapping( path="/current" , consumes = MediaType.APPLICATION_JSON_VALUE , 
-			produces =  MediaType.APPLICATION_JSON_VALUE )
+	@GetMapping( path="/current" )
 	public ResponseEntity<ProcessingDateResponse> getCurrentProcessingDate ( ) {
 		
 		ProcessingDateDTO dto = service.getCurrentProcessingDate();
